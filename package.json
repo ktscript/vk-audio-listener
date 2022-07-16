@@ -1,0 +1,58 @@
+{
+  "name": "ila",
+  "version": "0.0.1",
+  "description": "The script for listening vk audio",
+  "main": "./src/index.ts",
+  "bugs": {
+    "url": "https://gitlab.com/the-usik/ila/issues"
+  },
+  "scripts": {
+    "start": "ts-node -r tsconfig-paths/register ./src/index.ts",
+    "test": "jest --config jest.config.ts",
+    "build": "tsc -p tsconfig.json && npm run replace-paths && npm run compile",
+    "compile": "npx pkg -t node14-linux,node14-win -o ./build/bin/ila ./build/source/index.js",
+    "replace-paths": "tscpaths -p ./build/source/tsconfig.json -s ./build/source -o ./build/source"
+  },
+  "author": "the_usik",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@babel/core": "^7.13.1",
+    "@jest/types": "^26.6.2",
+    "@types/iconv": "^2.1.16",
+    "@types/iconv-lite": "^0.0.1",
+    "@types/jest": "^26.0.20",
+    "@types/koa": "^2.13.4",
+    "@types/koa-router": "^7.4.4",
+    "@types/node": "^14.14.20",
+    "@types/node-fetch": "^2.5.12",
+    "@types/tough-cookie": "^4.0.1",
+    "@types/user-agents": "^1.0.2",
+    "bytenode": "^1.1.7",
+    "debug": "^4.3.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "jest": "^26.6.3",
+    "module-alias": "^2.2.2",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.11.0",
+    "tscpaths": "^0.0.9",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "@antiadmin/anticaptchaofficial": "^1.0.14",
+    "abort-controller": "^3.0.0",
+    "cheerio": "^1.0.0-rc.10",
+    "fast-xml-parser": "^3.20.0",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.1.1",
+    "node-fetch": "^2.6.2",
+    "proxy-agent": "^4.0.1",
+    "telegraf": "^4.4.1",
+    "telegraf-inline-menu": "^6.3.0",
+    "telegraf-session-local": "^2.1.0",
+    "user-agents": "^1.0.771"
+  }
+}

@@ -1,0 +1,12 @@
+.vscode/
+build/
+data/
+node_modules/
+package-lock.json
+user-data/
+bot-data/
+resources/
+scripts/
+node_modules/
+ila-data/
+_*/

@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "CommonJS",
+    "strict": true,
+    "allowJs": true,
+    "outDir": "./build/source",
+    "removeComments": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "preserveConstEnums": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@bot/*": [
+        "bot/*"
+      ],
+      "@main/*": [
+        "main/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ]
+    }
+  },
+  "exclude": [
+    "./scripts",
+    "./build",
+    "./jest.config.ts",
+    "./test/*/*.js"
+  ]
+}
